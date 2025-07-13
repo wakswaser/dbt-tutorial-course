@@ -31,13 +31,6 @@ clean-targets:         # directories to be removed by `dbt clean`
 # files using the `{{ config(...) }}` macro.
 models:
   lessons:
-    +materialized: table
-    +persist_docs: #escreve documentação no bigquery
-      relation: true
-      columns: true
-    +hours_to_expiration: 168 #7 days after creation
-
-
-tests:
-  lessons:
-    +severity: warn
+    # Config indicated by + and applies to all files under models/example/
+    example:
+      +materialized: view

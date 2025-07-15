@@ -6,3 +6,6 @@ logs
 __pycache__/
 *.pyo
 *.pyd
+__pycache__
+google-cloud-sdk/
+  
